@@ -15,18 +15,18 @@ function Header() {
   return (
     <>
       {showCart && <CartDetails onClose={handleCartClose} />}
-      <header className="bg-indigo-950   py-4  ">
+      <header className="bg-slate-800  py-4 shadow ">
         <div className="container mx-auto  flex items-center justify-between">
-          <a className="text-3xl font-bold  text-orange-300 capitalize">
-            CineRental
+          <a className="text-3xl font-bold  text-red-400 capitalize">
+            MovieApp
           </a>
           <div className="flex gap-4 items-center justify-end text-white  ">
-            <a href="#" className="text-orange-400 font-base capitalize">
+            <a href="#" className="text-red-400 font-base capitalize">
               Day
             </a>
             <a
               onClick={handleCartClick}
-              className="text-orange-400 font-base capitalize relative "
+              className="text-red-400 font-base capitalize relative "
             >
               cart
               {cartData.length > 0 && (

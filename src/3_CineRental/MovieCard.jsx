@@ -26,7 +26,7 @@ function MovieCard({ movie }) {
     setShowModal(false);
   }
   return (
-    <div className="bg-slate-700 p-4 rounded space-y-2 border-orange-800 border-2">
+    <div className="bg-slate-800 p-4 rounded   ">
       {showModal && (
         <MovieDetails
           movie={selectedMovie}
@@ -36,22 +36,22 @@ function MovieCard({ movie }) {
       )}
       <div onClick={() => handleMovieSelection(movie)}>
         <img
-          className="object-cover "
+          className="object-cover border-red-300 border-1 mb-2 "
           src={getImgUrl(movie.cover)}
           alt="Movie"
         />
-        <h4 className="text-gray-200 capitalize text-lg font-medium">
-          {movie.title}
-        </h4>
-        <p className="text-base capitalize font-medium text-orange-300">
-          {movie.genre}
-        </p>
-        <button
-          onClick={(e) => handleAddToCart(e, movie)}
-          className="bg-orange-300 rounded-full py-2 px-3 text-black font-medium text-base"
-        >
-          $ {movie.price} Add To card
-        </button>
+        <div className="">
+          <p className="text-gray-300 capitalize text-base  ">{movie.title}</p>
+          <p className="text-base capitalize font-medium text-red-300 mb-2 ">
+            {movie.genre}
+          </p>
+          <button
+            onClick={(e) => handleAddToCart(e, movie)}
+            className="bg-red-300  rounded-full py-2 px-2 text-gray-900 font-medium text-sm"
+          >
+            ${movie.price} Add To card
+          </button>
+        </div>
       </div>
     </div>
   );
